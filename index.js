@@ -13,8 +13,13 @@ dotenv.config();
 const host = 'localhost';
 const port = 9000;
 
-const { SHOPIFY_API_KEY, SHOPIFY_API_SECRET, SHOPIFY_API_SCOPES, HOST } =
-  process.env;
+const {
+  SHOPIFY_API_KEY,
+  SHOPIFY_API_SECRET,
+  SHOPIFY_API_SCOPES,
+  HOST,
+  X_PROJECT_ACCESS_TOKEN,
+} = process.env;
 
 const shops = {};
 
@@ -148,7 +153,7 @@ app.post(
       method: 'post',
       url: 'https://portal.firmhouse.com/graphql',
       headers: {
-        'X-PROJECT-ACCESS-TOKEN': 'fCZur8VJcPP2P2ASnmZRLonr',
+        'X-PROJECT-ACCESS-TOKEN': X_PROJECT_ACCESS_TOKEN,
       },
       data: {
         query: query,
@@ -184,7 +189,7 @@ app.post(
       method: 'post',
       url: 'https://portal.firmhouse.com/graphql',
       headers: {
-        'X-PROJECT-ACCESS-TOKEN': 'fCZur8VJcPP2P2ASnmZRLonr',
+        'X-PROJECT-ACCESS-TOKEN': X_PROJECT_ACCESS_TOKEN,
       },
       data: {
         query: query,
@@ -220,7 +225,7 @@ app.post(
       method: 'post',
       url: 'https://portal.firmhouse.com/graphql',
       headers: {
-        'X-PROJECT-ACCESS-TOKEN': 'fCZur8VJcPP2P2ASnmZRLonr',
+        'X-PROJECT-ACCESS-TOKEN': X_PROJECT_ACCESS_TOKEN,
       },
       data: {
         query: query,
@@ -256,7 +261,7 @@ app.post(
       method: 'post',
       url: 'https://portal.firmhouse.com/graphql',
       headers: {
-        'X-PROJECT-ACCESS-TOKEN': 'fCZur8VJcPP2P2ASnmZRLonr',
+        'X-PROJECT-ACCESS-TOKEN': X_PROJECT_ACCESS_TOKEN,
       },
       data: {
         query: query,
@@ -321,7 +326,7 @@ app.post(
       method: 'post',
       url: 'https://portal.firmhouse.com/graphql',
       headers: {
-        'X-PROJECT-ACCESS-TOKEN': 'fCZur8VJcPP2P2ASnmZRLonr',
+        'X-PROJECT-ACCESS-TOKEN': X_PROJECT_ACCESS_TOKEN,
       },
       data: {
         query: query,
@@ -387,7 +392,7 @@ app.post(
       method: 'post',
       url: 'https://portal.firmhouse.com/graphql',
       headers: {
-        'X-PROJECT-ACCESS-TOKEN': 'fCZur8VJcPP2P2ASnmZRLonr',
+        'X-PROJECT-ACCESS-TOKEN': X_PROJECT_ACCESS_TOKEN,
       },
       data: {
         query: query,
